@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Price/Kg</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            body{
+                background-image: url(https://images.unsplash.com/photo-1600387845879-a4713f764110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .ml-container{
+                margin: 20px 0;
+	            flex: 1 0 auto;
+            }
+            .form-input { 
+	            text-align: center;
+                border: 2px solid #000000;
+                border-radius: 20px;
+	            width: 650px;
+	            height: 45px;
+	            margin-bottom: 5px;
+                background-color: white;
+                font-size: 20px;
+            }
+            .my-cta-button{
+	            background: white;
+   	            border: 2px solid #000000;
+                border-radius: 1000px;
+	            margin-top: 10px;
+                padding: 10px 36px;
+                color: #000000;
+                display: inline-block;
+   	            font: bold 20px/1 "Cambria", sans-serif;
+                text-align: center;
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body class="body2">
+        <header style="background-color: white;
+                       color: blue;
+                       border: 3px solid rgb(61, 74, 255);
+                       line-height: 25%;
+                       text-align: center;">
+        <h1 style="height: 20%;font-size: 40px;font-family: Cambria ;"><b>Prediction of Price/Kg</b></h1>
+       </header>
+       <br>
+       <br>
+       <br>
+       <h2 style="text-align: center;">
+            <span style="background-color: white;
+                         font-size: 33px;margin-bottom: 20px;
+                        margin-top: 200px;
+                        border:2px solid black;">
+                        Price of your Cereal is: <mark> Rs. {{ prediction2 }}</mark> 
+            </span>
+        </h2>
+    </body>
+</html>

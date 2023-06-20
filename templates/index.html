@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Rice Production Analysis</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            body{ 
+                background-image: url(https://images.unsplash.com/photo-1596337323475-d2bf40338c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+                background-repeat:no-repeat;
+                background-size:cover;
+                text-align: center;
+                padding: 0%;
+            }
+            .ml-container{
+                margin: 20px 0;
+	            flex: 1 0 auto;
+            }
+            .form-input { 
+	            text-align: center;
+                border: 2px solid #000000;
+                border-radius: 20px;
+	            width: 650px;
+	            height: 45px;
+	            margin-bottom: 5px;
+                background-color: white;
+                font-size: 20px;
+            }
+            .my-cta-button{
+	            background: white;
+   	            border: 2px solid #000000;
+                border-radius: 1000px;
+	            margin-top: 10px;
+                padding: 10px 36px;
+                color: #000000;
+                display: inline-block;
+   	            font: bold 20px/1 "Cambria", sans-serif;
+                text-align: center;
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body class="body1">
+        <header style="background-color: white;
+                       color: black;
+                       border: 3px solid rgb(61, 74, 255);
+                       line-height: 25%;
+                       text-align: center;">
+
+            <h1 style="height: 20%;font-size: 40px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center; color: blue;">
+                <b>Rice Production Analysis</b>
+            </h1>
+
+            <h3 style="font-size: 20px;padding: 0px;text-align: center; color: blue;">
+                <i>Fill the below options and predict the total production of Rice</i>
+            </h3>
+
+        </header>
+        <div class="ml-container">
+
+    		<form action="/predict" method="POST" >
+                <input class="form-input" type="text" name="size" placeholder="Total size in farm(hector) eg. 3" required><br>
+                <input class="form-input" type="text" name="seed" placeholder="Total seed(Kg) eg. 25" required><br>
+                <input class="form-input" type="text" name="urea" placeholder="Total use urea(Kg) eg. 1 to 1250" required><br>
+                <input class="form-input" type="text" name="labor" placeholder="Total Working Labor(Hrs) eg. 17 to 4774" required><br>
+                <input class="form-input" type="text" name="phosphate" placeholder="Total use phosphate(Kg) eg.0 to 700" required><br>
+                <input list="var" class="form-input" type="text" name="varieties" placeholder="varieties" required><br>
+                <datalist id="var">
+                    <option value="0">High</option>
+                    <option value="1">Mixed</option>
+                    <option value="2">Traditional</option>
+                </datalist>
+                <input class="form-input" type="text" name="presticide" placeholder="Total used presticide(Rs) eg. 0 to 62600" required><br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+            
+    	</div>
+    </body>
+</html>

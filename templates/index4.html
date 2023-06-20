@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Gross Ouput</title>
+        <style>
+            body{
+                background-image: url(https://images.pexels.com/photos/2804327/pexels-photo-2804327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .ml-container{
+                margin: 20px 0;
+	            flex: 1 0 auto;
+            }
+            .form-input { 
+	            text-align: center;
+                border: 2px solid #000000;
+                border-radius: 20px;
+	            width: 650px;
+	            height: 45px;
+	            margin-bottom: 5px;
+                background-color: white;
+                font-size: 20px;
+            }
+            .my-cta-button{
+	            background: white;
+   	            border: 2px solid #000000;
+                border-radius: 1000px;
+	            margin-top: 10px;
+                padding: 10px 36px;
+                color: #000000;
+                display: inline-block;
+   	            font: bold 20px/1 "Cambria", sans-serif;
+                text-align: center;
+                width: 30%;
+            }
+        </style>
+        <script>
+        function show(id,visibility){
+            document.getElementById(id).style.display=visibility;
+        }
+        </script>
+    </head>
+    <body>
+        <header style="background-color: white;
+                       color: blue;
+                       border: 3px solid rgb(61, 74, 255);
+                       line-height: 25%;
+                       text-align: center;" class="header2">
+            <h1 style="height: 20%;font-size: 40px;font-family: Cambria ; max-width: 100%;">Prediction of Gross Output and Harvesting Cost</h1>
+        </header>
+        <h2 style="text-align: center;">
+            <span style="background-color: white;
+                         font-size: 30px;
+                         margin-bottom: 20px;
+                         margin-top: 20px;
+                         border: 2px solid black">Your Gross Yield is: <mark>{{ prediction0 }}</mark> Kgs
+            </span>
+        </h2>
+        <br>
+        <h2 style="text-align: center;">
+            <span style="background-color: white;
+                         font-size: 30px; 
+                         margin-bottom: 30px;
+                         border: 2px solid black">Your Harvesting Cost is:  <mark>Rs. {{ prediction1 }}</mark> 
+            </span>
+        </h2>
+       <br>
+       <br>
+       <h2 style="font-size: 25px;
+                  background-color: white;
+                  border: 2px solid red;
+                  text-align: center;
+                  width:100%;">
+            Are you interested in production price, if yes click below button
+        </h2>
+        <a href="#last"> 
+            <h3 style="text-align: center;">
+                <button type="button" class="my-cta-button" onclick="show('all','inline');">Click Here</button>
+            </h3>
+        </a>
+        <div class="ml-container" id="all" style="display:none;text-align: center;border:3px solid black;">
+            <h2 style="text-align: center;">
+                <span style="background-color: white;
+                             font-size: 25px;
+                             margin-bottom: 5px;
+                             width: 50%; 
+                             border:2px solid red;">
+                    Fill the information for prediction of Price
+                </span>
+            </h2>
+    		<form action="/price" method="POST" >
+                <input class="form-input" type="text" name="price_seed" placeholder="Seed Price(/Kg) eg. 40 to 375" required><br>
+                <input class="form-input" type="text" name="wage" placeholder="labor wage(/hrs) eg. 30 to 175" required><br>
+                <input class="form-input" type="text" name="price_phos" placeholder="Price in Phosphate(/Kg) eg. 60 to 120" required><br>
+                <input class="form-input" type="text" name="price_urea" placeholder="Price in urea(/kg) eg. 50 to 100" required><br>
+                <input id="last" type="submit" class="my-cta-button" value="Predict">
+        	</form>
+       </div>
+    
+    </body>
+</html>

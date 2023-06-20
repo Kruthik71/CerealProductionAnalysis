@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cereal Production Analysis</title>
+  <style>
+    body {
+      background-image: url(https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      text-align: center;
+      background-repeat:no-repeat;
+      background-size:cover;
+      padding: 0%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: blue;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button-container button {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Inherit text color from parent */
+      font-weight: inherit; /* Inherit font weight from parent */
+      /* Add any additional CSS properties as needed */
+    }
+    
+    .button-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+<!--
+  <script>
+    function invokeActions() {
+      // Perform action 1
+      fetch('/third')
+        .then(response => response.text())
+        .then(data => console.log(data));
+
+      // Perform action 2
+      fetch('/invoke-scripts')
+        .then(response => response.text())
+        .then(data => console.log(data));
+    }
+  </script>
+-->
+</head>
+<body>
+    <br>
+    <header style="background-color: white;
+                   color: black;
+                   border: 3px solid rgb(61, 74, 255);
+                   line-height: 25%;
+                   text-align: center;">
+        <h1 style="height: 20%;font-size: 40px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center; color: blue;">
+            <b>Cereal Production Analysis</b>
+        </h1>
+        <h3 style="font-size: 20px;padding: 0px;text-align: center; color: blue;">
+            <i>Where a farmer can "PREDICT" the total "HARVEST" as well as the "PRICE" for the prodcution beforehand</i>
+        </h3>
+    </header>
+  <div class="center">
+    <div class="button-container">
+
+      <button><a href="/second"> Rice Prediction </a></button>
+      <button><a href="/third"> Wheat Prediction </a></button>
+
+
+      <!--
+      <button onclick="invokeActions()">Wheat Prediction</a></button>
+-->
+    </div>
+  </div>
+</body>
+</html>
